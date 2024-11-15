@@ -9,15 +9,20 @@ on:
         description: Deploy to
         required: true
         options:
-        - all
-        - dev
-        - test
-        - prod
+          - all
+          - dev
+          - test
+          - prod
         #        default: all
+      app_stack:
+        type: string
+        description: Application stack
+        required: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: echo something
-      run: echo "something!"
+      - name: echo something
+        run: |
+          echo "The inputs where ${{ inputs.stage }}-${{ inputs.app_stack }}"
