@@ -3,15 +3,17 @@ name: Test
 
 on:
   workflow_dispatch:
-    stage:
-      type: choice
-      description: Deploy to
-      required: true
-      options:
-      - all
-      - dev
-      - test
-      - prod
+    inputs:
+      stage:
+        type: choice
+        description: Deploy to
+        required: true
+        options:
+        - all
+        - dev
+        - test
+        - prod
+        default: all
 
 jobs:
   build:
