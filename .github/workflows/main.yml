@@ -25,4 +25,6 @@ jobs:
     steps:
       - name: echo something
         run: |
-          echo "The inputs where ${{ inputs.stage }}-${{ inputs.app_stack }}"
+          echo "TARGET=${{ inputs.stage }}-${{ inputs.app_stack }}" >> $GITHUB_OUTPUT
+      - name: Use the output
+        run: echo "The inputs where ${{ steps.set-output.outputs.TARGET }}"
