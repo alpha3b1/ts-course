@@ -1,6 +1,6 @@
 name: Test
 run-name: dummy-${{ inputs.stage }}
-
+# command - count - motion
 on:
   workflow_dispatch:
     inputs:
