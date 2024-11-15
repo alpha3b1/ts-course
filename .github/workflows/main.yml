@@ -1,5 +1,5 @@
-
 name: Test
+run-name: dummy-${{ inputs.stage }}
 
 on:
   workflow_dispatch:
