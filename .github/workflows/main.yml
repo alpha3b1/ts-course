@@ -24,6 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo something
+        id: set-output
         run: |
           echo "TARGET=${{ inputs.stage }}-${{ inputs.app_stack }}" >> $GITHUB_OUTPUT
       - name: Use the output
