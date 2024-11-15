@@ -1,0 +1,19 @@
+
+name: Test
+
+on:
+  workflow_dispatch:
+    stage:
+      type: choice
+      description: Deploy to
+      options:
+      - all
+      - dev
+      - test
+      - prod
+
+jobs:
+  build:
+    steps:
+    - name: echo something
+      run: echo "something!"
